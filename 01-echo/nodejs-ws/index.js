@@ -4,7 +4,7 @@ const path = require('node:path');
 const webSocket = require('ws');
 
 const hostname = '127.0.0.1'
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
     if (req.method !== 'GET' || req.url.split('?')[0] !== '/') {
@@ -26,8 +26,8 @@ const server = http.createServer((req, res) => {
     });
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(PORT, hostname, () => {
+    console.log(`Server running at http://${hostname}:${PORT}/`);
 });
 
 const wss = new webSocket.Server({ server });
@@ -40,7 +40,6 @@ wss.on('connection', (ws) => {
     });
     ws.on('close', () => {
         console.log('Client disconnected');
-        clients.delete(ws);
     });
     ws.on('error', (error) => {
         console.error('Error WebSocket:', error);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Client</title>
+</head>
+<body>
+    <div id="messages"></div>
+    <script>
+        const ws = new WebSocket('ws://localhost:3000');
+
+        ws.onopen = () => {
+            console.log('Connected to WebSocket server');
+            if (ws.readyState === WebSocket.OPEN) {
+                const text = 'Echo client message sent to server';
+                ws.send(text);
+                console.log(text);
+            };
+        };
+
+        ws.onmessage = (event) => {
+            console.log('Received message:', event.data);
+            const msgDiv = document.createElement('div');
+            msgDiv.innerHTML = `${event.data}`;
+            messages.appendChild(msgDiv);
+        };
+        
+        ws.onerror = (error) => {
+                console.error('Error WebSocket:', error);
+        };
+
+        ws.onclose = () => {
+            console.log('Disconnected from WebSocket server');
+        };
+    </script>
+</body>
+</html>

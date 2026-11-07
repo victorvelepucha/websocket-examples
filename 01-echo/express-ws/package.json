@@ -1,0 +1,19 @@
+{
+  "name": "express_ws",
+  "version": "1.0.0",
+  "description": "Echo websocket server and client using WebSocket with Express.js and ws library",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["websocket", "echo", "express", "ws"],
+  "author": "Victor Velepucha",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0",
+    "ws": "^8.22.1"
+  }
+}
