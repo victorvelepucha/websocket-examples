@@ -16,6 +16,7 @@ organizados por nivel de complejidad.
 | 01-echo | Node.js + ws | [01-echo/nodejs-ws](01-echo/nodejs-ws) |
 | 01-echo | Express.js + ws | [01-echo/express-ws](01-echo/express-ws) |
 | 01-echo | Python + websockets | [01-echo/python-websockets](01-echo/python-websockets) |
+| 01-echo | ASP.NET Core (WebSockets integrado) | [01-echo/aspnetcore-websockets](01-echo/aspnetcore-websockets) |
 
 ## Cómo usar este repositorio
 
