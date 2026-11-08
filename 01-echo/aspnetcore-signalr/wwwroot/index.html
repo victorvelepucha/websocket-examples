@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>SignalR Client</title>
+</head>
+<body>
+    <div id="messages"></div>
+
+    <!-- Cliente de SignalR (versión 10.0.11). -->
+    <script src="lib/signalr.min.js"></script>
+    <script>
+        const messages = document.getElementById('messages');
+
+        function log(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            messages.appendChild(div);
+        }
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl('/echo')
+            .build();
+
+        // El servidor invoca "ReceiveMessage" en el cliente
+        connection.on('ReceiveMessage', (message) => {
+            log('Received: ' + message);
+        });
+
+        connection.start()
+            .then(() => {
+                const text = 'SignalR echo client message sent to server';
+                log('Sent: ' + text);
+                // Invoca el método "SendMessage" del hub
+                return connection.invoke('SendMessage', text);
+            })
+            .catch((error) => console.error('SignalR error:', error));
+    </script>
+</body>
+</html>
