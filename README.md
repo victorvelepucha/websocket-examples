@@ -18,6 +18,19 @@ organizados por nivel de complejidad.
 | 01-echo | Python + websockets | [01-echo/python-websockets](01-echo/python-websockets) |
 | 01-echo | ASP.NET Core (WebSockets integrado) | [01-echo/aspnetcore-websockets](01-echo/aspnetcore-websockets) |
 | 01-echo | ASP.NET Core SignalR | [01-echo/aspnetcore-signalr](01-echo/aspnetcore-signalr) |
+| 01-echo | Node.js + Socket.IO | [01-echo/nodejs-socketio](01-echo/nodejs-socketio) |
+
+## Ejemplos pendientes
+- **01-echo:** Socket.IO con Python.
+- **02-simple-chat:** chat con varios clientes y broadcast.
+- **03-advanced-chat:** ejemplo complejo tipo WhatsApp.
+
+## Fuera del alcance
+
+El nivel `01-echo` se limita a unos pocos stacks para centrarse en el concepto:
+primero WebSockets puros y luego abstracciones sobre ellos (SignalR en .NET,
+Socket.IO en Node.js y Python). Lenguajes como Java, Swift, Dart o Rust no se
+incluyen por ahora.
 
 ## Cómo usar este repositorio
 
