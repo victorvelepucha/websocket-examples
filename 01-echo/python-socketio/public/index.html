@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Socket.IO Client (Python Socket.IO server)</title>
+</head>
+<body>
+    <div id="messages"></div>
+
+    <!-- Cliente de Socket.IO, copia local (no lo sirve el servidor de Python) -->
+    <script src="lib/socket.io.min.js"></script>
+    <script>
+        const messages = document.getElementById('messages');
+
+        function log(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            messages.appendChild(div);
+        }
+
+        const socket = io();
+
+        socket.on('connect', () => {
+            const text = 'Hello from the browser to the Python Socket.IO server';
+            log('Sent: ' + text);
+            socket.emit('message', text);
+        });
+
+        socket.on('message', (message) => {
+            log('Received: ' + message);
+        });
+
+        socket.on('disconnect', () => {
+            log('Disconnected from server');
+        });
+    </script>
+</body>
+</html>

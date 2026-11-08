@@ -19,9 +19,9 @@ organizados por nivel de complejidad.
 | 01-echo | ASP.NET Core (WebSockets integrado) | [01-echo/aspnetcore-websockets](01-echo/aspnetcore-websockets) |
 | 01-echo | ASP.NET Core SignalR | [01-echo/aspnetcore-signalr](01-echo/aspnetcore-signalr) |
 | 01-echo | Node.js + Socket.IO | [01-echo/nodejs-socketio](01-echo/nodejs-socketio) |
+| 01-echo | Python + Socket.IO | [01-echo/python-socketio](01-echo/python-socketio) |
 
 ## Ejemplos pendientes
-- **01-echo:** Socket.IO con Python.
 - **02-simple-chat:** chat con varios clientes y broadcast.
 - **03-advanced-chat:** ejemplo complejo tipo WhatsApp.
 
