@@ -1,2 +1,10 @@
+# Node.js
 node_modules
+
+# Entornos de configuración (.env.example y .env.development sí se versionan)
 .env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
