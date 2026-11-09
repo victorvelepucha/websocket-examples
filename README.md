@@ -20,9 +20,9 @@ organizados por nivel de complejidad.
 | 01-echo | ASP.NET Core SignalR | [01-echo/aspnetcore-signalr](01-echo/aspnetcore-signalr) |
 | 01-echo | Node.js + Socket.IO | [01-echo/nodejs-socketio](01-echo/nodejs-socketio) |
 | 01-echo | Python + Socket.IO | [01-echo/python-socketio](01-echo/python-socketio) |
+| 02-webchat | Express.js + ws | [02-webchat/express-ws](02-webchat/express-ws) |
 
 ## Ejemplos pendientes
-- **02-simple-chat:** chat con varios clientes y broadcast.
 - **03-advanced-chat:** ejemplo complejo tipo WhatsApp.
 
 ## Fuera del alcance
